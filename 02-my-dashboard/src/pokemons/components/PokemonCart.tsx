@@ -9,7 +9,7 @@ interface Props {
 
 export const PokemonCart = ({ pokemon }: Props) => {
 
-    const { id } = pokemon;
+    const { name } = pokemon;
 
     return (
 
@@ -25,7 +25,7 @@ export const PokemonCart = ({ pokemon }: Props) => {
                     <p className="pt-2 text-lg font-semibold text-gray-50">{pokemon.name}</p>
                     <div className="mt-5">
                         <Link
-                            href={`pokemon/${id}`}
+                            href={`pokemons/${name}`}
                             className="border rounded-full py-2 px-4 text-xs font-semibold text-gray-100"
                         >
                             Saber mas
