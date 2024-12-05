@@ -9,7 +9,7 @@ interface Props {
 
 export const PokemonCart = ({ pokemon }: Props) => {
 
-    const { id, name } = pokemon;
+    const { id } = pokemon;
 
     return (
 

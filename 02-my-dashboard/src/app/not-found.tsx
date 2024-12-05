@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import CounterPage from './dashboard/counter/page';
 import { Sidebar } from '@/components/Sidebar';
 
 export default function NotFound() {
