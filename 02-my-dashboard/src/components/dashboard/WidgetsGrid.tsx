@@ -1,3 +1,5 @@
+'use client'
+
 import { useAppSelector } from "@/store";
 import { SimpleWidget } from "./SimpleWidget"
 import { AiOutlineQq } from "react-icons/ai";
@@ -11,11 +13,11 @@ export const WidgetsGrid = () => {
   return (
     <div className="flex flex-wrap p-2 items-center justify-center">
         <SimpleWidget 
-            title= {isCart} 
+            title= {  `${isCart}` } 
             subTitle= "Subtitulo"
             icon= {<AiOutlineQq size={50} className="text-blue-500"/>}
-            label= "Label"
-            href= "dashboard/counter"
+            label= "Contador"
+            href= '/dashboard/counter'
         /> 
     </div>
   )
