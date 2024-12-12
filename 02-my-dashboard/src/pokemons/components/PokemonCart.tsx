@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { SimplePokemon } from '../interfaces/simple-pokemons'
 import { IoHeart, IoHeartOutline } from 'react-icons/io5'
-import { useAppSelector } from '@/store'
+import { useAppDispatch, useAppSelector } from '@/store'
+import { toggleFavorite } from '@/store/pokemons/pokemons'
 
 interface Props {
     pokemon: SimplePokemon
@@ -16,9 +17,10 @@ export const PokemonCart = ({ pokemon }: Props) => {
     // del store, vamos a buscar si el pokemon es favorito con el id
     // se utiliza el simbolo !! para convertirlo en boolean
     const isFavorite = useAppSelector(state => !!state.pokemons[id]);
+    const dispatch = useAppDispatch();
 
     const onToggle = () => {
-
+        dispatch(toggleFavorite(pokemon));
     }
    
 
