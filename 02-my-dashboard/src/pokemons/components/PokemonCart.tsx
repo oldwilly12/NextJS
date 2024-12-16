@@ -16,7 +16,7 @@ export const PokemonCart = ({ pokemon }: Props) => {
     const {id, name } = pokemon;
     // del store, vamos a buscar si el pokemon es favorito con el id
     // se utiliza el simbolo !! para convertirlo en boolean
-    const isFavorite = useAppSelector(state => !!state.pokemons[id]);
+    const isFavorite = useAppSelector(state => !!state.pokemons.favorites[id]);
     const dispatch = useAppDispatch();
 
     const onToggle = () => {

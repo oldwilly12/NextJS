@@ -7,9 +7,9 @@ import { IoHeartOutline } from 'react-icons/io5';
 
 export const PokemonGridFav = () => {
 
-  const pokemonsFav = useAppSelector(state => Object.values(state.pokemons));
+  const pokemonsFav = useAppSelector(state => Object.values(state.pokemons.favorites));
   //El use state le da el valor inicial que seria el pokemonsFav pero aun con cambio no se afectara
-  const [pokemons, setPokemons] = useState(pokemonsFav);
+  // const [pokemons, setPokemons] = useState(pokemonsFav);
 
   // const keys = Object.values(pokemonsFav).map(key => {
   //   return key
@@ -22,9 +22,9 @@ export const PokemonGridFav = () => {
 
     <>
     {
-      pokemons.length === 0
+      pokemonsFav.length === 0
       ? (<NoFavorites />)
-      : (<PokemonGrid pokemons={ pokemons } />)
+      : (<PokemonGrid pokemons={ pokemonsFav } />)
     }
     </>
 
